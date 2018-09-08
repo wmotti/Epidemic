@@ -1,0 +1,1278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="generator" content="AsciiDoc 8.1.0" />
+<style type="text/css">
+/* Debug borders */
+p, li, dt, dd, div, pre, h1, h2, h3, h4, h5, h6 {
+/*
+  border: 1px solid red;
+*/
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+tt {
+  color: navy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  font-family: sans-serif;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  border-bottom: 2px solid silver;
+  padding-top: 0.5em;
+}
+
+div.sectionbody {
+  font-family: serif;
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+span#author {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+span#email {
+}
+span#revision {
+  font-family: sans-serif;
+}
+
+div#footer {
+  font-family: sans-serif;
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+div#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+div#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+div#preamble,
+div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-right: 10%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+
+div.listingblock {
+  margin-right: 0%;
+}
+div.listingblock > div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock > div.content {
+  padding-left: 2.0em;
+}
+
+div.attribution {
+  text-align: right;
+}
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 2px solid silver;
+}
+
+div.exampleblock > div.content {
+  border-left: 2px solid silver;
+  padding: 0.5em;
+}
+
+div.verseblock div.content {
+  white-space: pre;
+}
+
+div.imageblock div.content { padding-left: 0; }
+div.imageblock img { border: 1px solid silver; }
+span.image img { border-style: none; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: italic;
+}
+dd > *:first-child {
+  margin-top: 0;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.olist2 {
+  list-style-type: lower-alpha;
+}
+
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+tfoot {
+  font-weight: bold;
+}
+
+div.hlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+td.hlist1 {
+  vertical-align: top;
+  font-style: italic;
+  padding-right: 0.8em;
+}
+td.hlist2 {
+  vertical-align: top;
+}
+
+@media print {
+  div#footer-badges { display: none; }
+}
+
+div#toctitle {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel1, div.toclevel2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+}
+/* Workarounds for IE6's broken and incomplete CSS2. */
+
+div.sidebar-content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+div.sidebar-title, div.image-title {
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 0.0em;
+  margin-bottom: 0.5em;
+}
+
+div.listingblock div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock-content {
+  padding-left: 2.0em;
+}
+
+div.exampleblock-content {
+  border-left: 2px solid silver;
+  padding-left: 0.5em;
+}
+
+/* IE6 sets dynamically generated links as visited. */
+div#toc a:visited { color: blue; }
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+window.onload = generateToc
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, October 2006. License: GPL */
+
+function getText(el) {
+  var text = "";
+  for (var i = el.firstChild; i != null; i = i.nextSibling) {
+    if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+      text += i.data;
+    else if (i.firstChild != null)
+      text += getText(i);
+  }
+  return text;
+}
+
+function TocEntry(el, text, toclevel) {
+  this.element = el;
+  this.text = text;
+  this.toclevel = toclevel;
+}
+
+function tocEntries(el) {
+  var result = new Array;
+  var re = /[hH]([2-3])/;
+  // Function that scans the DOM tree for header elements (the DOM2
+  // nodeIterator API would be a better technique but not supported by all
+  // browsers).
+  var iterate = function (el) {
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+        var mo = re.exec(i.tagName)
+        if (mo)
+          result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+        iterate(i);
+      }
+    }
+  }
+  iterate(el);
+  return result;
+}
+
+function generateToc() {
+  var toc = document.getElementById("toc");
+  var entries = tocEntries(document.getElementsByTagName("body")[0]);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "toc" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+}
+/*]]>*/
+</script>
+<title>Epidemic</title>
+</head>
+<body>
+<div id="header">
+<h1>Epidemic</h1>
+<span id="author">Walter Mottinelli</span><br />
+<span id="email"><tt>&lt;<a href="mailto:wmotti@gmail.com">wmotti@gmail.com</a>&gt;</tt></span><br />
+<div id="toc">
+  <div id="toctitle">Table of Contents</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<h2>1. Abstract</h2>
+<div class="sectionbody">
+<p>Breve relazione sull'uso del package <tt>Epidemic</tt>, che permette di simulare diversi modelli epidemiologici in una popolazione grazie al framework <tt>SimPy</tt>.
+Ne viene illustrato il funzionamento mostrando come sono state realizzate alcune simulazioni dimostrative.</p>
+</div>
+<h2>2. Simulazione del modello SI</h2>
+<div class="sectionbody">
+<p>Il primo modello che ho simulato è il modello SI (file <tt>SI.py</tt>), nel quale la popolazione è partizionata in due compartimenti (suscettibili ed infetti) e non è prevista guarigione (né decesso) una volta contratta l'infezione.
+La simulazione viene realizzata istanziando un oggetto della classe <tt>Epidemic</tt>, con gli opportuni parametri:</p>
+<div class="tableblock">
+<table rules="none"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<col width="205" />
+<col width="765" />
+<thead>
+  <tr>
+    <th align="left">
+    Parametro
+    </th>
+    <th align="left">
+    Descrizione
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    <tt>nr_individuals</tt>
+    </td>
+    <td align="left">
+    numero di individui della popolazione;
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>initial_infects</tt>
+    </td>
+    <td align="left">
+    numero di individui infetti all'inizio della simulazione;
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>infect_prob</tt>
+    </td>
+    <td align="left">
+    probabilità di contrarre l'infezione durante un contatto a rischio;
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>contact_rate</tt>
+    </td>
+    <td align="left">
+    tasso dei contatti tra gli individui;
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>run_time</tt>
+    </td>
+    <td align="left">
+    durata della simulazione.
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<p>Il costruttore della classe <tt>Epidemic</tt> si occupa di inizializzare la simulazione, in particolare di istanziare tanti oggetti della classe <tt>Individual</tt> quanti sono gli individui coinvolti nella simulazione. Una volta completata questa operazione, la simulazione viene avviata e tutti gli individui eseguono il loro ciclo vitale, definito dal metodo <tt>live()</tt>, e compiendo azioni definite a seconda del loro stato di salute.</p>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 2.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">live</span></span><span style="color: #990000">(</span>self<span style="color: #990000">):</span> <span style="font-style: italic"><span style="color: #9A1900">## Process Execution Method</span></span>
+<span style="font-style: italic"><span style="color: #9A1900">    """Method that defines the life cycle of the individual."""</span></span>
+
+    <span style="font-weight: bold"><span style="color: #0000FF">while</span></span> <span style="color: #993399">1</span><span style="color: #990000">:</span>
+
+        <span style="color: #990000">[...]</span>
+
+        <span style="font-style: italic"><span style="color: #9A1900"># life cycle of a susceptible individual</span></span>
+        <span style="font-weight: bold"><span style="color: #0000FF">while</span></span> self<span style="color: #990000">.</span>health<span style="color: #009900">_</span>status <span style="color: #990000">==</span> <span style="color: #FF0000">'susceptible'</span><span style="color: #990000">:</span>
+            wait <span style="color: #990000">=</span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">wait</span></span><span style="color: #990000">(</span>self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>contact<span style="color: #009900">_</span>rate<span style="color: #990000">)</span>
+            yield hold<span style="color: #990000">,</span> self<span style="color: #990000">,</span> wait
+            self<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">get_in_contact</span></span><span style="color: #990000">()</span>
+
+        <span style="color: #990000">[...]</span>
+</tt></pre></div></div>
+<p>In questo modello molto semplice, l'unica azione possibile è la transizione di un individuo dallo stato &#8220;suscettibile&#8221; allo stato &#8220;infetto&#8221; in seguito ad un contatto.</p>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 2.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">get_in_contact</span></span><span style="color: #990000">(</span>self<span style="color: #990000">):</span>
+<span style="font-style: italic"><span style="color: #9A1900">    """The individual get in contact with another individual."""</span></span>
+    contact <span style="color: #990000">=</span> self<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">choose_contact</span></span><span style="color: #990000">()</span>
+    <span style="font-style: italic"><span style="color: #9A1900"># infection?</span></span>
+    <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>rng<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">random</span></span><span style="color: #990000">()</span> <span style="color: #990000">&lt;=</span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>infect<span style="color: #009900">_</span>prob<span style="color: #990000">:</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> self<span style="color: #990000">.</span>health<span style="color: #009900">_</span>status <span style="color: #990000">==</span> <span style="color: #FF0000">'susceptible'</span> <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> contact<span style="color: #990000">.</span>health<span style="color: #009900">_</span>status <span style="color: #990000">==</span> <span style="color: #FF0000">'infect'</span><span style="color: #990000">:</span>
+            <span style="color: #990000">[...]</span>
+            self<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">get_infect</span></span><span style="color: #990000">()</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">elif</span></span> self<span style="color: #990000">.</span>health<span style="color: #009900">_</span>status <span style="color: #990000">==</span> <span style="color: #FF0000">'infect'</span> <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> contact<span style="color: #990000">.</span>health<span style="color: #009900">_</span>status <span style="color: #990000">==</span> <span style="color: #FF0000">'susceptible'</span><span style="color: #990000">:</span>
+            <span style="color: #990000">[...]</span>
+            contact<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">get_infect</span></span><span style="color: #990000">()</span>
+    <span style="color: #990000">[...]</span>
+
+<span style="color: #990000">[...]</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">get_infect</span></span><span style="color: #990000">(</span>self<span style="color: #990000">):</span>
+<span style="font-style: italic"><span style="color: #9A1900">    """The individual becomes infect."""</span></span>
+    self<span style="color: #990000">.</span>health<span style="color: #009900">_</span>status <span style="color: #990000">=</span> <span style="color: #FF0000">'infect'</span>
+    <span style="color: #990000">[...]</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">check_termination_conds</span></span><span style="color: #990000">():</span>
+        self<span style="color: #990000">.</span>e<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">stop_simulation</span></span><span style="color: #990000">()</span>
+</tt></pre></div></div>
+<p>Nel metodo <tt>get_infect()</tt> viene invocato anche il metodo <tt>check_termination_conds()</tt> che esegue alcuni controlli per verificare se la simulazione può terminare prematuramente: ad esempio, nel caso di questo modello, viene verificato se nella popolazione non ci sono più infetti o suscettibili.</p>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 2.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">check_termination_conds</span></span><span style="color: #990000">(</span>self<span style="color: #990000">):</span>
+<span style="font-style: italic"><span style="color: #9A1900">    """Checks if the simulation can be stopped before the time runs out."""</span></span>
+    <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> self<span style="color: #990000">.</span>total<span style="color: #009900">_</span>infects <span style="color: #990000">==</span> <span style="color: #993399">0</span><span style="color: #990000">:</span>
+        <span style="color: #990000">[...]</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">print</span></span> <span style="color: #FF0000">"\nSimulation ended prematurely: infection ended, no more infects."</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #009900">True</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="font-weight: bold"><span style="color: #0000FF">not</span></span> self<span style="color: #990000">.</span>model<span style="color: #009900">_</span>has<span style="color: #009900">_</span>new<span style="color: #009900">_</span>susceptibles<span style="color: #990000">:</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> self<span style="color: #990000">.</span>total<span style="color: #009900">_</span>susceptibles <span style="color: #990000">==</span> <span style="color: #993399">0</span> <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> self<span style="color: #990000">.</span>total<span style="color: #009900">_</span>immunes <span style="color: #990000">==</span> <span style="color: #993399">0</span><span style="color: #990000">:</span>
+            <span style="color: #990000">[...]</span>
+            <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #009900">True</span>
+    <span style="color: #990000">[...]</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #009900">False</span>
+</tt></pre></div></div>
+<p>Al termine della simulazione, vengono mostrate alcune informazioni utili:</p>
+<ul>
+<li>
+<p>
+se la simulazione è terminata prematuramente, ne viene indicato il motivo;
+</p>
+</li>
+<li>
+<p>
+la durata della simulazione, in secondi;
+</p>
+</li>
+<li>
+<p>
+la situazione della popolazione al termine della simulazione.
+</p>
+</li>
+</ul>
+<p>Un esempio di output, eseguendo il file <tt>SI.py</tt> (<tt>python SI.py</tt>):</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Simulation ended prematurely: infection extended to the whole population.
+
+Simulation duration: 6.579163 seconds
+Situation at the end of the simulation:
+- infects: 100
+- susceptibles: 0</tt></pre>
+</div></div>
+<p>E' possibile disabilitare la visualizzazione di questi dati finali passando al costruttore della classe <tt>Epidemic</tt> il parametro <tt>stats=False</tt>.</p>
+<p>Inoltre, se è correttamente installato l'applicativo <tt>gnuplot</tt> (<a href="http://www.gnuplot.info">http://www.gnuplot.info</a>) e la sua interfaccia python <tt>gnuplot-py</tt> (<a href="http://gnuplot-py.sourceforge.net">http://gnuplot-py.sourceforge.net</a>), è possibile disegnare il grafico dell'andamento temporale del numero di suscettibili ed infetti, ottenendo un risultato di questo tipo:</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/SI.png" alt="images/SI.png"/>
+</div>
+</div>
+<p>E' possibile disporre che il grafico non venga visualizzato passando al costruttore il parametro <tt>plot=False</tt>.</p>
+</div>
+<h2>3. Simulazione del modello SIS</h2>
+<div class="sectionbody">
+<p>Il secondo modello che ho simulato è il modello SIS (file <tt>SIS.py</tt>), che differisce dal precedente in quanto prevede la guarigione. Siccome nel modello SIS alla guarigione non segue un periodo di immunità (il parametro <tt>immune_after_recovery</tt> vale <tt>False</tt>), è prevista la transizione diretta di un individuo dallo stato &#8220;infetto&#8221; allo stato &#8220;suscettibile&#8221;. Leggendo il codice seguente, si tenga presente inoltre che nel modello in esame non è previsto nemmeno il decesso di un individuo infetto (il parametro <tt>death_rate</tt> vale zero).</p>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 2.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">live</span></span><span style="color: #990000">(</span>self<span style="color: #990000">):</span> <span style="font-style: italic"><span style="color: #9A1900">## Process Execution Method</span></span>
+<span style="font-style: italic"><span style="color: #9A1900">    """Method that defines the life cycle of the individual."""</span></span>
+
+    <span style="font-weight: bold"><span style="color: #0000FF">while</span></span> <span style="color: #993399">1</span><span style="color: #990000">:</span>
+
+        <span style="color: #990000">[...]</span>
+
+        <span style="font-style: italic"><span style="color: #9A1900"># life cycle of an infect individual</span></span>
+        <span style="font-weight: bold"><span style="color: #0000FF">while</span></span> self<span style="color: #990000">.</span>health<span style="color: #009900">_</span>status <span style="color: #990000">==</span> <span style="color: #FF0000">'infect'</span><span style="color: #990000">:</span>
+            event<span style="color: #990000">,</span> wait <span style="color: #990000">=</span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">next_event</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #000000">dict</span></span><span style="color: #990000">(</span>
+                contact <span style="color: #990000">=</span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>contact<span style="color: #009900">_</span>rate<span style="color: #990000">,</span>
+                recover <span style="color: #990000">=</span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>recover<span style="color: #009900">_</span>rate<span style="color: #990000">,</span>
+                death <span style="color: #990000">=</span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>death<span style="color: #009900">_</span>rate<span style="color: #990000">))</span>
+            yield hold<span style="color: #990000">,</span> self<span style="color: #990000">,</span> wait
+            <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> event <span style="color: #990000">==</span> <span style="color: #FF0000">'recover'</span><span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>immune<span style="color: #009900">_</span>after<span style="color: #009900">_</span>recovery <span style="color: #990000">==</span> <span style="color: #009900">True</span><span style="color: #990000">:</span>
+                    self<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">get_immune</span></span><span style="color: #990000">()</span>
+                <span style="font-weight: bold"><span style="color: #0000FF">else</span></span><span style="color: #990000">:</span>
+                    self<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">get_susceptible</span></span><span style="color: #990000">()</span>
+            <span style="font-weight: bold"><span style="color: #0000FF">elif</span></span> event <span style="color: #990000">==</span> <span style="color: #FF0000">'contact'</span><span style="color: #990000">:</span>
+                self<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">get_in_contact</span></span><span style="color: #990000">()</span>
+            <span style="font-weight: bold"><span style="color: #0000FF">elif</span></span> event <span style="color: #990000">==</span> <span style="color: #FF0000">'death'</span><span style="color: #990000">:</span>
+                self<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">die</span></span><span style="color: #990000">(</span>naturally<span style="color: #990000">=</span><span style="color: #009900">False</span><span style="color: #990000">)</span>
+                yield passivate<span style="color: #990000">,</span> self
+
+        <span style="color: #990000">[...]</span>
+</tt></pre></div></div>
+<p>Ai parametri presentati durante la simulazione del modello SI si aggiunge il parametro</p>
+<div class="tableblock">
+<table rules="none"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<col width="171" />
+<col width="411" />
+<thead>
+  <tr>
+    <th align="left">
+    Parametro
+    </th>
+    <th align="left">
+    Descrizione
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    <tt>recover_rate</tt>
+    </td>
+    <td align="left">
+    tasso di guarigione di un individuo.
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<p>Eseguendo una simulazione dimostrativa (<tt>python SIS.py</tt>), ho ottenuto i seguenti risultati:</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Simulation duration: 36.428224 seconds
+Situation at the end of the simulation:
+- infects: 17
+- susceptibles: 83</tt></pre>
+</div></div>
+<p>e il seguente grafico:</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/SIS.png" alt="images/SIS.png"/>
+</div>
+</div>
+<p>A differenza della precedente simulazione del modello SI, in questo caso c'è un bilanciamento tra numero di suscettibili ed infetti proprio grazie alla possibilità di guarigione previsto dal modello SIS.</p>
+</div>
+<h2>4. Simulazione del modello SIR</h2>
+<div class="sectionbody">
+<p>Di seguito ho simulato il modello SIR, che prevede l'immunizzazione dell'individuo infetto dopo la sua guarigione, e alcune sue varianti.</p>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 2.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">get_immune</span></span><span style="color: #990000">(</span>self<span style="color: #990000">):</span>
+<span style="font-style: italic"><span style="color: #9A1900">    """The individual becomes immune."""</span></span>
+    self<span style="color: #990000">.</span>health<span style="color: #009900">_</span>status <span style="color: #990000">=</span> <span style="color: #FF0000">'immune'</span>
+    <span style="color: #990000">[...]</span>
+
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">live</span></span><span style="color: #990000">(</span>self<span style="color: #990000">):</span> <span style="font-style: italic"><span style="color: #9A1900">## Process Execution Method</span></span>
+<span style="font-style: italic"><span style="color: #9A1900">    """Method that defines the life cycle of the individual."""</span></span>
+
+    <span style="font-weight: bold"><span style="color: #0000FF">while</span></span> <span style="color: #993399">1</span><span style="color: #990000">:</span>
+
+        <span style="color: #990000">[...]</span>
+
+        <span style="font-style: italic"><span style="color: #9A1900"># life cycle of an infect individual</span></span>
+        <span style="font-weight: bold"><span style="color: #0000FF">while</span></span> self<span style="color: #990000">.</span>health<span style="color: #009900">_</span>status <span style="color: #990000">==</span> <span style="color: #FF0000">'infect'</span><span style="color: #990000">:</span>
+            event<span style="color: #990000">,</span> wait <span style="color: #990000">=</span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">next_event</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #000000">dict</span></span><span style="color: #990000">(</span>
+                contact <span style="color: #990000">=</span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>contact<span style="color: #009900">_</span>rate<span style="color: #990000">,</span>
+                recover <span style="color: #990000">=</span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>recover<span style="color: #009900">_</span>rate<span style="color: #990000">,</span>
+                death <span style="color: #990000">=</span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>death<span style="color: #009900">_</span>rate<span style="color: #990000">))</span>
+            yield hold<span style="color: #990000">,</span> self<span style="color: #990000">,</span> wait
+            <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> event <span style="color: #990000">==</span> <span style="color: #FF0000">'recover'</span><span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>immune<span style="color: #009900">_</span>after<span style="color: #009900">_</span>recovery <span style="color: #990000">==</span> <span style="color: #009900">True</span><span style="color: #990000">:</span>
+                    self<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">get_immune</span></span><span style="color: #990000">()</span>
+                <span style="font-weight: bold"><span style="color: #0000FF">else</span></span><span style="color: #990000">:</span>
+                    self<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">get_susceptible</span></span><span style="color: #990000">()</span>
+                <span style="color: #990000">[...]</span>
+
+        <span style="font-style: italic"><span style="color: #9A1900"># life cycle of an immune individual</span></span>
+            <span style="font-weight: bold"><span style="color: #0000FF">while</span></span> self<span style="color: #990000">.</span>health<span style="color: #009900">_</span>status <span style="color: #990000">==</span> <span style="color: #FF0000">'immune'</span><span style="color: #990000">:</span>
+                <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>immunization<span style="color: #009900">_</span>vanish<span style="color: #009900">_</span>rate <span style="color: #990000">!=</span> <span style="color: #993399">0</span><span style="color: #990000">:</span>
+                    wait <span style="color: #990000">=</span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">wait</span></span><span style="color: #990000">(</span>self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>immunization<span style="color: #009900">_</span>vanish<span style="color: #009900">_</span>rate<span style="color: #990000">)</span>
+                    yield hold<span style="color: #990000">,</span> self<span style="color: #990000">,</span> wait
+                    self<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">get_susceptible</span></span><span style="color: #990000">()</span>
+                <span style="font-weight: bold"><span style="color: #0000FF">else</span></span><span style="color: #990000">:</span>
+                    yield passivate<span style="color: #990000">,</span> self
+</tt></pre></div></div>
+<h3>4.1. Modello SIR con immunizzazione temporanea</h3>
+<p>Il terzo modello simulato prevede un periodo di immunizzazione temporanea (parametro <tt>immunization_vanish_rate</tt> diverso da zero) dopo la guarigione.</p>
+<p>Vengono quindi definiti nuovi parametri del costruttore della classe <tt>Epidemic</tt>:</p>
+<div class="tableblock">
+<table rules="none"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<col width="308" />
+<col width="754" />
+<thead>
+  <tr>
+    <th align="left">
+    Parametro
+    </th>
+    <th align="left">
+    Descrizione
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    <tt>initial_immunes</tt>
+    </td>
+    <td align="left">
+    il numero degli individui immuni all'inizio della simulazione;
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>immune_after_recovery</tt>
+    </td>
+    <td align="left">
+    impostato a <tt>True</tt>, permette la transizione allo stato &#8220;immune&#8221;;
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>immunization_vanish_rate</tt>
+    </td>
+    <td align="left">
+    diverso da zero, determina con che frequenza l'immunità svanisce.
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<p>Eseguendo la simulazione dimostrativa (&#8220;python SIR_temporary_immunization.py&#8221;), ottengo il seguente output:</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Simulation ended prematurely: infection ended, no more infects.
+
+Simulation duration: 7.915376 seconds
+Situation at the end of the simulation:
+- infects: 0
+- susceptibles: 65
+immunes: 35</tt></pre>
+</div></div>
+<p>e il grafico seguente, che mostra chiaramente l'esplosione iniziale dell'epidemia e la sua regressione nel momento in cui il numero di suscettibili è ridotto e il numero di immuni cresce:</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/SIR_temporary_immunization.png" alt="images/SIR_temporary_immunization.png"/>
+</div>
+</div>
+<h3>4.2. Modello SIR con immunizzazione permanente</h3>
+<p>Il quarto modello simulato è il modello SIR con immunizzazione permanente. I parametri di questo modello sono gli stessi del precedente con immunizzazione temporanea: va soltanto impostato a zero il parametro <tt>immunization_vanish_rate</tt>.</p>
+<p>L'output della simulazione dimostrativa (<tt>python SIR_permanent_immunization.py</tt>) è il seguente:</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Simulation ended prematurely: infection ended, no more infects.
+
+Simulation duration: 10.229361 seconds
+Situation at the end of the simulation:
+- infects: 0
+- susceptibles: 21
+- immunes: 79</tt></pre>
+</div></div>
+<p>e il grafico non è dissimile dal precedente (ovviamente in questo caso la linea degli immuni è monotona non decrescente):</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/SIR_permanent_immunization.png" alt="images/SIR_permanent_immunization.png"/>
+</div>
+</div>
+<h3>4.3. Modello SIR con possibilità di decesso degli infetti</h3>
+<p>Nella quinta simulazione dimostrativa, ho aggiunto la possibilità di decesso di un individuo infetto. A questo scopo ho aggiunto il parametro:</p>
+<div class="tableblock">
+<table rules="none"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<col width="148" />
+<col width="960" />
+<thead>
+  <tr>
+    <th align="left">
+    Parametro
+    </th>
+    <th align="left">
+    Descrizione
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    <tt>death_rate</tt>
+    </td>
+    <td align="left">
+    determina la frequenza con cui nel modello avviene una morte causata dall'infezione.
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<p>Eseguendo la simulazione (<tt>python SIR_permanent_immunization_with_death.py</tt>), ho ottenuto il seguente output:</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Simulation ended prematurely: infection ended, no more infects.
+
+Simulation duration: 14.483893 seconds
+Situation at the end of the simulation:
+- infects: 0
+- susceptibles: 23
+- immunes: 75
+- deaths for the epidemic: 2</tt></pre>
+</div></div>
+<p>e il grafico seguente:</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/SIR_permanent_immunization_with_death.png" alt="images/SIR_permanent_immunization_with_death.png"/>
+</div>
+</div>
+<h3>4.4. Modello SIR con dinamiche vitali</h3>
+<p>Ho poi realizzato un'ulteriore variazione al modello SIR aggiungendo le dinamiche vitali (nascite e morti naturali), in particolare gestendo i decessi come un evento casuale indipendente dallo stato di salute dell'individuo colpito</p>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 2.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">die</span></span><span style="color: #990000">(</span>self<span style="color: #990000">,</span> naturally<span style="color: #990000">=</span><span style="color: #009900">True</span><span style="color: #990000">):</span>
+<span style="font-style: italic"><span style="color: #9A1900">    """An individual dies, for natural reasons or for the epidemic."""</span></span>
+    <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> naturally <span style="color: #990000">==</span> <span style="color: #009900">True</span><span style="color: #990000">:</span>
+        self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>total<span style="color: #009900">_</span>natural<span style="color: #009900">_</span>deaths <span style="color: #990000">+=</span> <span style="color: #993399">1</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">else</span></span><span style="color: #990000">:</span>
+        <span style="color: #990000">[...]</span>
+    <span style="color: #990000">[...]</span>
+    self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>all<span style="color: #009900">_</span>individuals<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">remove</span></span><span style="color: #990000">(</span>self<span style="color: #990000">)</span>
+    <span style="color: #990000">[...]</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">live</span></span><span style="color: #990000">(</span>self<span style="color: #990000">):</span> <span style="font-style: italic"><span style="color: #9A1900">## Process Execution Method</span></span>
+<span style="font-style: italic"><span style="color: #9A1900">    """Method that defines the life cycle of the individual."""</span></span>
+
+    <span style="font-weight: bold"><span style="color: #0000FF">while</span></span> <span style="color: #993399">1</span><span style="color: #990000">:</span>
+        <span style="font-style: italic"><span style="color: #9A1900"># considering the natural death probability</span></span>
+        <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>natural<span style="color: #009900">_</span>death<span style="color: #009900">_</span>prob<span style="color: #990000">:</span>
+            <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>rng<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">random</span></span><span style="color: #990000">()</span> <span style="color: #990000">&lt;=</span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>natural<span style="color: #009900">_</span>death<span style="color: #009900">_</span>prob<span style="color: #990000">:</span>
+                self<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">die</span></span><span style="color: #990000">(</span>naturally<span style="color: #990000">=</span><span style="color: #009900">True</span><span style="color: #990000">)</span>
+                yield passivate<span style="color: #990000">,</span> self
+
+        <span style="color: #990000">[...]</span>
+</tt></pre></div></div>
+<p>e facendo dipendere le nascite dal numero di contatti tra individui.</p>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 2.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">get_in_contact</span></span><span style="color: #990000">(</span>self<span style="color: #990000">):</span>
+<span style="font-style: italic"><span style="color: #9A1900">    """The individual get in contact with another individual."""</span></span>
+    contact <span style="color: #990000">=</span> self<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">choose_contact</span></span><span style="color: #990000">()</span>
+    <span style="font-style: italic"><span style="color: #9A1900"># infection?</span></span>
+    <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>rng<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">random</span></span><span style="color: #990000">()</span> <span style="color: #990000">&lt;=</span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>infect<span style="color: #009900">_</span>prob<span style="color: #990000">:</span>
+        <span style="color: #990000">[...]</span>
+    <span style="font-style: italic"><span style="color: #9A1900"># birth of a child?</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900"># the contact between a man and a woman will happen in one case out of two</span></span>
+    <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>newborn<span style="color: #009900">_</span>prob <span style="color: #990000">!=</span> <span style="color: #993399">0</span> <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>rng<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">random</span></span><span style="color: #990000">()</span> <span style="color: #990000">&lt;=</span> <span style="color: #993399">0.5</span> <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> <span style="color: #990000">\</span>
+       self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>rng<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">random</span></span><span style="color: #990000">()</span> <span style="color: #990000">&lt;=</span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>newborn<span style="color: #009900">_</span>prob<span style="color: #990000">:</span>
+        <span style="color: #990000">[...]</span>
+            newborn<span style="color: #009900">_</span>health<span style="color: #009900">_</span>status <span style="color: #990000">=</span> <span style="color: #FF0000">'susceptible'</span>
+        self<span style="color: #990000">.</span>e<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add_an_individual</span></span><span style="color: #990000">(</span>newborn<span style="color: #009900">_</span>health<span style="color: #009900">_</span>status<span style="color: #990000">)</span>
+</tt></pre></div></div>
+<p>Ho aggiunto quindi al costruttore della classe <tt>Epidemic</tt> i seguenti parametri:</p>
+<div class="tableblock">
+<table rules="none"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<col width="240" />
+<col width="617" />
+<thead>
+  <tr>
+    <th align="left">
+    Parametro
+    </th>
+    <th align="left">
+    Descrizione
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    <tt>newborn_prob</tt>
+    </td>
+    <td align="left">
+    la probabilità che da un contatto si abbia un neonato;
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>natural_death_prob</tt>
+    </td>
+    <td align="left">
+    la probabilità che avvenga un decesso naturale.
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<p>La simulazione che ho eseguito (<tt>python SIR_temporary_immunization_with_vital_dynamics.py</tt>) ha portato al seguente risultato:</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Simulation ended prematurely: infection ended, no more infects.
+
+Simulation duration: 40.477773 seconds
+Situation at the end of the simulation:
+- infects: 0
+- susceptibles: 73
+- immunes: 32
+- deaths for the epidemic: 7
+- births: 14
+- deaths for natural reasons: 2</tt></pre>
+</div></div>
+<p>e al seguente grafico:</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/SIR_temporary_immunization_with_vital_dynamics.png" alt="images/SIR_temporary_immunization_with_vital_dynamics.png"/>
+</div>
+</div>
+<h3>4.5. Modello SIR con infezioni e immunizzazioni &#8220;verticali&#8221;</h3>
+<p>Infine, ho variato ulteriormente questo modello prevedendo l'immunizzazione o l'infezione &#8220;verticale&#8221;, cioè la possibilità che il neonato nasca infetto, se uno dei due genitori è infetto, o immune, se la madre è immune.</p>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 2.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">get_in_contact</span></span><span style="color: #990000">(</span>self<span style="color: #990000">):</span>
+<span style="font-style: italic"><span style="color: #9A1900">    """The individual get in contact with another individual."""</span></span>
+    contact <span style="color: #990000">=</span> self<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">choose_contact</span></span><span style="color: #990000">()</span>
+    <span style="font-style: italic"><span style="color: #9A1900"># infection?</span></span>
+    <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>rng<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">random</span></span><span style="color: #990000">()</span> <span style="color: #990000">&lt;=</span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>infect<span style="color: #009900">_</span>prob<span style="color: #990000">:</span>
+        <span style="color: #990000">[...]</span>
+    <span style="font-style: italic"><span style="color: #9A1900"># birth of a child?</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900"># the contact between a man and a woman will happen in one case out of two</span></span>
+    <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>newborn<span style="color: #009900">_</span>prob <span style="color: #990000">!=</span> <span style="color: #993399">0</span> <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>rng<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">random</span></span><span style="color: #990000">()</span> <span style="color: #990000">&lt;=</span> <span style="color: #993399">0.5</span> <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> <span style="color: #990000">\</span>
+        self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>rng<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">random</span></span><span style="color: #990000">()</span> <span style="color: #990000">&lt;=</span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>newborn<span style="color: #009900">_</span>prob<span style="color: #990000">:</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>newborn<span style="color: #009900">_</span>can<span style="color: #009900">_</span>be<span style="color: #009900">_</span>infect <span style="color: #990000">==</span> <span style="color: #009900">True</span> <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> <span style="color: #990000">\</span>
+            <span style="color: #990000">((</span>self<span style="color: #990000">.</span>health<span style="color: #009900">_</span>status <span style="color: #990000">==</span> <span style="color: #FF0000">'infect'</span> <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> contact<span style="color: #990000">.</span>health<span style="color: #009900">_</span>status <span style="color: #990000">!=</span> <span style="color: #FF0000">'immune'</span><span style="color: #990000">)</span> <span style="font-weight: bold"><span style="color: #0000FF">or</span></span> <span style="color: #990000">\</span>
+             <span style="color: #990000">(</span>contact<span style="color: #990000">.</span>health<span style="color: #009900">_</span>status <span style="color: #990000">==</span> <span style="color: #FF0000">'infect'</span> <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> self<span style="color: #990000">.</span>health<span style="color: #009900">_</span>status <span style="color: #990000">!=</span> <span style="color: #FF0000">'immune'</span><span style="color: #990000">)):</span>
+            newborn<span style="color: #009900">_</span>health<span style="color: #009900">_</span>status <span style="color: #990000">=</span> <span style="color: #FF0000">'infect'</span>
+        <span style="font-style: italic"><span style="color: #9A1900"># The mother will be the immune parent only in the half of the births.</span></span>
+        <span style="font-style: italic"><span style="color: #9A1900"># Then, only in these cases the newborn will receive "vertically" the immunity</span></span>
+        <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>newborn<span style="color: #009900">_</span>can<span style="color: #009900">_</span>be<span style="color: #009900">_</span>immune <span style="color: #990000">==</span> <span style="color: #009900">True</span> <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> self<span style="color: #990000">.</span>e<span style="color: #990000">.</span>rng<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">random</span></span><span style="color: #990000">()</span> <span style="color: #990000">&lt;=</span> <span style="color: #993399">0.5</span> <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> <span style="color: #990000">\</span>
+            <span style="color: #990000">(</span>self<span style="color: #990000">.</span>health<span style="color: #009900">_</span>status <span style="color: #990000">==</span> <span style="color: #FF0000">'immune'</span> <span style="font-weight: bold"><span style="color: #0000FF">or</span></span> contact<span style="color: #990000">.</span>health<span style="color: #009900">_</span>status <span style="color: #990000">==</span> <span style="color: #FF0000">'immune'</span><span style="color: #990000">):</span>
+            newborn<span style="color: #009900">_</span>health<span style="color: #009900">_</span>status <span style="color: #990000">=</span> <span style="color: #FF0000">'immune'</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">else</span></span><span style="color: #990000">:</span>
+            newborn<span style="color: #009900">_</span>health<span style="color: #009900">_</span>status <span style="color: #990000">=</span> <span style="color: #FF0000">'susceptible'</span>
+        self<span style="color: #990000">.</span>e<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add_an_individual</span></span><span style="color: #990000">(</span>newborn<span style="color: #009900">_</span>health<span style="color: #009900">_</span>status<span style="color: #990000">)</span>
+</tt></pre></div></div>
+<p>Per far ciò, ho previsto che il costruttore della classe <tt>Epidemic</tt> accettasse due nuovi parametri booleani:</p>
+<div class="tableblock">
+<table rules="none"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<col width="274" />
+<col width="468" />
+<thead>
+  <tr>
+    <th align="left">
+    Parametro
+    </th>
+    <th align="left">
+    Descrizione
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    <tt>newborn_can_be_infect</tt>
+    </td>
+    <td align="left">
+    se <tt>True</tt>, il neonato può essere infetto;
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>newborn_can_be_immune</tt>
+    </td>
+    <td align="left">
+    se <tt>True</tt>, il neonato può essere immune.
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<p>Il risultato di una simulazione d'esempio (<tt>python SIR_temporary_immunization_with_vital_dinamycs_vertical</tt>) è stata la seguente:</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>Simulation duration: 91.220459 seconds
+Situation at the end of the simulation:
+- infects: 18
+- susceptibles: 21
+- immunes: 77
+- deaths for the epidemic: 16
+- births: 34
+- deaths for natural reasons: 2</tt></pre>
+</div></div>
+<p>con il seguente grafico:</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/SIR_temporary_immunization_with_vital_dynamics_vertical.png" alt="images/SIR_temporary_immunization_with_vital_dynamics_vertical.png"/>
+</div>
+</div>
+</div>
+<h2>5. Appendix A: Elenco completo dei parametri del costruttore della classe Epidemic</h2>
+<div class="sectionbody">
+<div class="tableblock">
+<table rules="none"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<col width="308" />
+<col width="1040" />
+<thead>
+  <tr>
+    <th align="left">
+    Parametro
+    </th>
+    <th align="left">
+    Descrizione
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    <tt>nr_individuals</tt>
+    </td>
+    <td align="left">
+    numero di individui nella popolazione
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>initial_infects</tt>
+    </td>
+    <td align="left">
+    numero di infetti all'inizio della simulazione
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>initial_immunes</tt>
+    </td>
+    <td align="left">
+    numero di immuni all'inizio della simulazione
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>infect_prob</tt>
+    </td>
+    <td align="left">
+    probabilità di contratte l'infezione dopo un contatto con un infetto
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>contact_rate</tt>
+    </td>
+    <td align="left">
+    tasso di contatto tra gli individui
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>recover_rate</tt>
+    </td>
+    <td align="left">
+    tasso di guarigione dall'infezione
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>immune_after_recovery</tt>
+    </td>
+    <td align="left">
+    se impostato a <tt>True</tt>, gli individui diventano immuni dopo la guarigione dall'infezione
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>immunization_vanish_rate</tt>
+    </td>
+    <td align="left">
+    se diverso da zero, l'immunizzazione è temporanea e svanisce secondo il tasso specificato
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>death_rate</tt>
+    </td>
+    <td align="left">
+    tasso di decesso causato dall'epidemia
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>newborn_can_be_infect</tt>
+    </td>
+    <td align="left">
+    se impostato a <tt>True</tt>, il neonato può essere infetto immediatamente dopo la nascita
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>newborn_can_be_immune</tt>
+    </td>
+    <td align="left">
+    se impostato a <tt>True</tt>, il neonato può essere immune immediatamente dopo la nascita
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>newborn_prob</tt>
+    </td>
+    <td align="left">
+    probabilità di nascita di un neonato in seguito ad un contatto
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>natural_death_prob</tt>
+    </td>
+    <td align="left">
+    probabilità di decesso naturale, non causato dall'epidemia
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>run_time</tt>
+    </td>
+    <td align="left">
+    durata della simulazione
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>debug</tt>
+    </td>
+    <td align="left">
+    mostra più informazioni di debug durante l'esecuzione di una simulazione
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>process_debug</tt>
+    </td>
+    <td align="left">
+    mostra più informazioni di debug sui processi di SimPy durante la simulazione
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>progress</tt>
+    </td>
+    <td align="left">
+    mostra un indicatore di avanzamento durante la simulazione
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>stats</tt>
+    </td>
+    <td align="left">
+    mostra alcune statistiche sulla popolazione e sulla simulazione, al suo termine
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <tt>plot</tt>
+    </td>
+    <td align="left">
+    mostra un grafico rappresentante l'evoluzione della popolazione alla fine della simulazione
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+<h2>6. Appendix B: Requisiti di sistema</h2>
+<div class="sectionbody">
+<p>Il package Epidemic richiede i seguenti software (vengono indicate anche le versioni testate):</p>
+<div class="tableblock">
+<table rules="none"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<col width="125" />
+<col width="102" />
+<col width="125" />
+<col width="400" />
+<thead>
+  <tr>
+    <th align="left">
+    Software
+    </th>
+    <th align="left">
+    Versione
+    </th>
+    <th align="left">
+    Importanza
+    </th>
+    <th align="left">
+    URL
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="left">
+    python
+    </td>
+    <td align="left">
+    2.5.1
+    </td>
+    <td align="left">
+    necessario
+    </td>
+    <td align="left">
+    <a href="http://www.python.org">http://www.python.org</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    SimPy
+    </td>
+    <td align="left">
+    1.8
+    </td>
+    <td align="left">
+    necessario
+    </td>
+    <td align="left">
+    <a href="http://simpy.sourceforge.net">http://simpy.sourceforge.net</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    gnuplot
+    </td>
+    <td align="left">
+    4.2
+    </td>
+    <td align="left">
+    opzionale
+    </td>
+    <td align="left">
+    <a href="http://www.gnuplot.info">http://www.gnuplot.info</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    gnuplot-py
+    </td>
+    <td align="left">
+    1.7
+    </td>
+    <td align="left">
+    opzionale
+    </td>
+    <td align="left">
+    <a href="http://gnuplot-py.sourceforge.net">http://gnuplot-py.sourceforge.net</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    psyco
+    </td>
+    <td align="left">
+    1.5.2
+    </td>
+    <td align="left">
+    opzionale
+    </td>
+    <td align="left">
+    <a href="http://psyco.sourceforge.net">http://psyco.sourceforge.net</a>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 09-Sep-2007 16:08:12 CEST
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+README for Epidemic 0.1
+=======================
+
+Installation
+------------
+python setup.py install
+
+Examples
+--------
+cd examples
+python SI.py
+...
+
+Documentation
+-------------
+cd doc
+Read the file index.html
+
+Tutorial/relazione
+------------------
+cd relazione
+Read the file relazione.html
