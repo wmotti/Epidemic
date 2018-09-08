@@ -1,6 +1,8 @@
 README for Epidemic 0.1
 =======================
 
+A python package for simulating various epidemiological models in a population.
+
 Installation
 ------------
 python setup.py install
